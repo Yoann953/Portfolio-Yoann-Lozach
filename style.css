@@ -1,6 +1,9 @@
 /*GENERAL*/
+html{}
+    
 body{
     font-family: 'Lato', sans-serif;
+    margin: 0 auto;
 }
 h1,h2,h3,h4,h5,h6{
     font-weight: bold;
@@ -18,18 +21,17 @@ section .heading h2{
 .divider{
     width: 100px;
     height: 2px;
-    background-color: red;
+    background-color: rgb(8, 16, 88);
     margin: 0 auto 20px;
 }
 .divider.white{
-    background-color: white;
+    background-color: white; 
 }
 ul{
     list-style: none;
 }
 .button1{
-    font-weight: bold;
-    color: white;
+    font-weight: bold; 
     text-transform: uppercase;
     border: 1px solid white;
     padding: 18px 50px;
@@ -41,13 +43,13 @@ ul{
     background: transparent;
 }
 .button1:hover{
-    background: rgb(255, 255, 255);
-    color: red;
+    background: rgb(255, 255, 255, 0.2);
+    color: white;
 }
 
 /* NAVBAR */
 .navbar{
-    background-color: red;
+    background-color: rgb(4, 5, 63, 0.9);
     letter-spacing: 2px;
     text-transform: uppercase;
     font-weight: bold;
@@ -58,33 +60,55 @@ ul{
     text-align: center;
 }
 .nav-link{
-    color: white !important;
-    margin: 0 6px;
+    color: white !important; 
+    margin: 0 80px;
 }
 .nav-link.active,
 .nav-link:hover{
-    background-color: white;
-    color: red !important;
+    background-color: rgb(255, 255, 255, 0.5);
 }
 
 /*ABOUT*/
 #about{
-    background-color: red;
-}
-.profile-picture{
-    text-align: center;
-    margin: 0px auto 30px;
+    background-image: url(images/theme2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 #about .heading h4{
     color: white;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 12px;
+}
+#about .heading h1{
+    color: white;
+}
+#about p{
+    color: white;
+    font-size: 20px;
+}
+#about .button1{
+    color: white;
+}
+.vignets {
+    animation: fadein 8s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
 }
 
-
 /*SKILLS*/
+
+#skills{
+    background: white;
+}
 #skills .heading h2{
-    color: red;
+    color: black;
 }
 #skills .progress{
     height: 45px;
@@ -94,114 +118,203 @@ ul{
     margin-bottom: 0px;
 }
 #skills .progress-bar{
-    background-color: red;
+    background-color: rgb(8, 16, 88);
 }
 #skills .progress-bar h5{
     text-shadow: 2px 2px 2px black;
     margin-bottom: 3px;
 }
-
+#skills .heading p{
+    font-size: 20px;
+    text-align: center;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+#skills .bar-1{
+    animation: progresse-1 3s linear;
+}
+@keyframes progresse-1 {
+    from { width:0%; } to { width: 75%; }
+}
+#skills .bar-2{
+    animation: progresse-2 3s linear;
+}
+@keyframes progresse-2 {
+    from { width:0%; } to { width: 70%; }
+}
+#skills .bar-3{
+    animation: progresse-3 3s linear;
+}
+@keyframes progresse-3 {
+    from { width:0%; } to { width: 55%; }
+}
+#skills .bar-4{
+    animation: progresse-4 3s linear;
+}
+@keyframes progresse-4 {
+    from { width:0%; } to { width: 70%; }
+}
+#skills .bar-5{
+    animation: progresse-5 3s linear;
+}
+@keyframes progresse-5 {
+    from { width:0%; } to { width: 50%; }
+}
 
 /*EXPERIENCE*/
 #experience{
-    background-color: red;
+    background-color: rgb(8, 16, 88);
 }
-#experience .heading h2{
+#experience .heading{
     color: white;
 }
-.timeline{
-    padding: 30px 10px;
+.heading h2{
+    color: white;
+}
+/* The actual timeline (the vertical ruler) */
+.main-timeline {
     position: relative;
 }
-.timeline:before{
-    content: " ";
+.main-timeline h4{
+    color: rgb(3, 0, 151);
+}
+.main-timeline h5{
+    color: black;
+}
+.main-timeline h6{
+    color: gray;
+}
+.main-timeline p{
+    font-size: 20px;
+}
+.card:hover {
+    cursor:pointer;
+    transform:scale(1.08);
+}
+.card{
+    transition: transform .4s;
+}
+  
+/* The actual timeline (the vertical ruler) */
+.main-timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: black;
     top: 0;
     bottom: 0;
-    position: absolute;
-    width: 5px;
-    background-color: #333;
     left: 50%;
-    margin-left: -2.5px;
-}
-.timeline > li{
-    margin-bottom: 20px;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .timeline {
     position: relative;
-}
-.timeline > li::before,
-.timeline > li:after{
-    content: " ";
-    display: table;
-}
-.timeline > li::after{
-    clear: both;
-}
-.timeline li .timeline-badge{
-    color: red;
-    width: 50px;
-    line-height: 50px;
-    font-size: 20px;
-    text-align: center;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .timeline::after {
+    content: "";
     position: absolute;
-    top: 16px;
-    left: 50%;
-    margin-left: -25px;
+    width: 25px;
+    height: 25px;
+    right: -13px;
     background-color: white;
+    border: 5px solid black;
+    top: 15px;
     border-radius: 50%;
-}
-.timeline-panel-container{
-    width: 50%;
-    float: left;
-}
-.timeline-panel-container-inverted{
-    width: 50%;
-    float: right;
-}
-.timeline-panel{
-    width: 90%;
-    float: right;
-    margin-right: 40px;
-    border: 1px solid #d4d4d4;
-    border-radius: 7px;
-    padding: 20px 15px;
-    position: relative;
-    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-    background: white;
-}
-.timeline-panel-container-inverted .timeline-panel{
-    float: left;
-    margin-left: 40px;
-}
-
-.timeline-panel:after{
-    position: absolute;
-    top: 27px;
-    right: -14px;
-    display: inline-block;
-    border-top: 14px solid transparent;
-    border-left: 14px solid white;
-    border-right: 0 solid white;
-    border-bottom: 14px solid transparent;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    padding: 0px 40px 20px 0px;
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    padding: 0px 0px 20px 40px;
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
     content: " ";
-}
-.timeline-panel-container-inverted .timeline-panel:after{
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -14px;
-    right: auto;
-}
-.timeline-heading h3{
-    margin-top: 5px;
-    font-size: 20px;
-}
-.timeline-heading h4{
-    color: red;
-    
-}
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    position: absolute;
+    top: 18px;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -12px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .main-timeline::after {
+      left: 31px;
+    }
+  
+    /* Full-width containers */
+    .timeline {
+      width: 100%;
+      padding-left: 70px;
+      padding-right: 25px;
+    }
+  
+    /* Make sure that all arrows are pointing leftwards */
+    .timeline::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after,
+    .right::after {
+      left: 18px;
+    }
+  
+    .left::before {
+      right: auto;
+    }
+  
+    /* Make all right containers behave like the left ones */
+    .right {
+      left: 0%;
+    }
+  }
 
 
 /* EDUCATION */
+
+#education{
+    
+}
 #education .heading  h2{
-    color: red;
+    color: black;
     margin: 15px 0px;
 }
 .education-block{
@@ -213,7 +326,22 @@ ul{
     border-radius: 5px;
     border: 1px solid #ccc;
     margin-bottom: 20px;
+    animation: float 6s ease-in-out infinite;
 }
+@keyframes float {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
 .education-block h5{
     color: #888;
     font-size: 15px;
@@ -221,9 +349,10 @@ ul{
 }
 .education-block span{
     font-size: 35px;
+    color: rgb(8, 16, 88);
 }
 .education-block h3{
-    color: red;
+    color: rgb(3, 0, 151);
     margin: 15px 0px;
 }
 .education-block h4{
@@ -234,7 +363,7 @@ ul{
 
 /* PORTFOLIO */
 #portfolio{
-    background-color: red;
+    background-color: rgb(8, 16, 88);
 }
 #portfolio .heading h2{
     color: white;
@@ -253,11 +382,11 @@ ul{
 
 /* FOOTER */
 footer{
-    background-color: #333;
+    background-color: rgb(8, 16, 88);
     padding: 20px 0 40px;
 }
 footer span{
-    color: red;
+    color: white;
     font-size: 25px;
     line-height: 35px;
 }
@@ -272,10 +401,10 @@ footer h5{
 /* CONTACT */
 
 #contact{
-    background: white;
+    /*background: white;*/
 }
 #contact .heading h2{
-    color: red;
+    /*color: red;*/
 }
 .heading a{
     color: black;
