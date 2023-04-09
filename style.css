@@ -130,31 +130,31 @@ ul{
     margin: 0 auto;
 }
 #skills .bar-1{
-    animation: progresse-1 4s linear;
+    animation: progresse-1 3s linear;
 }
 @keyframes progresse-1 {
     from { width:0%; } to { width: 75%; }
 }
 #skills .bar-2{
-    animation: progresse-2 4s linear;
+    animation: progresse-2 3s linear;
 }
 @keyframes progresse-2 {
     from { width:0%; } to { width: 70%; }
 }
 #skills .bar-3{
-    animation: progresse-3 4s linear;
+    animation: progresse-3 3s linear;
 }
 @keyframes progresse-3 {
     from { width:0%; } to { width: 55%; }
 }
 #skills .bar-4{
-    animation: progresse-4 4s linear;
+    animation: progresse-4 3s linear;
 }
 @keyframes progresse-4 {
     from { width:0%; } to { width: 70%; }
 }
 #skills .bar-5{
-    animation: progresse-5 4s linear;
+    animation: progresse-5 3s linear;
 }
 @keyframes progresse-5 {
     from { width:0%; } to { width: 50%; }
