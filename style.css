@@ -151,14 +151,27 @@ ul{
     animation: progresse-4 3s linear;
 }
 @keyframes progresse-4 {
-    from { width:0%; } to { width: 70%; }
+    from { width:0%; } to { width: 13%; }
 }
 #skills .bar-5{
     animation: progresse-5 3s linear;
 }
 @keyframes progresse-5 {
+    from { width:0%; } to { width: 70%; }
+}
+#skills .bar-6{
+    animation: progresse-6 3s linear;
+}
+@keyframes progresse-6 {
+    from { width:0%; } to { width: 13%; }
+}
+#skills .bar-7{
+    animation: progresse-7 3s linear;
+}
+@keyframes progresse-7 {
     from { width:0%; } to { width: 50%; }
 }
+
 
 /*EXPERIENCE*/
 #experience{
